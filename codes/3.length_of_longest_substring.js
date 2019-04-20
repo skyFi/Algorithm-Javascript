@@ -43,7 +43,7 @@
 
   // var a = 'pwwkew';
   // var a = 'bbbbb';
-  // var a = 'abcabcbb';
+  var a = 'abcabcbb';
   // var a = 'aab';
   // var a = 'dvdf';
   const c = lengthOfLongestSubstring(a);
