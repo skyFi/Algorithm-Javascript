@@ -26,6 +26,26 @@
    * @return {number}
    */
   var lengthOfLongestSubstring = function(s) {
-    // todo:
+    const uniq = [];
+    let maxLength = 0;
+    for (let i = 0; i < s.length; i++) {
+      const iIndex = uniq.indexOf(s[i]);
+      uniq.push(s[i]);
+      if (iIndex > -1) {
+        uniq.splice(0, iIndex + 1);
+      }
+      if (maxLength < uniq.length) {
+        maxLength = uniq.length;
+      }
+    }
+    return maxLength;
   };
+
+  // var a = 'pwwkew';
+  // var a = 'bbbbb';
+  // var a = 'abcabcbb';
+  // var a = 'aab';
+  // var a = 'dvdf';
+  const c = lengthOfLongestSubstring(a);
+  console.log(c);
 }
